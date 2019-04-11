@@ -42,10 +42,25 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let navList = document.querySelectorAll("a");
-console.log(navList);
+// console.log(navList);
 navList[0].textContent = siteContent["nav"]["nav-item-1"];
 navList[1].textContent = siteContent["nav"]["nav-item-2"];
 navList[2].textContent = siteContent["nav"]["nav-item-3"];
 navList[3].textContent = siteContent["nav"]["nav-item-4"];
 navList[4].textContent = siteContent["nav"]["nav-item-5"];
 navList[5].textContent = siteContent["nav"]["nav-item-6"];
+
+let bigHeader = document.querySelector("h1");
+console.log(bigHeader);
+bigHeader.textContent = siteContent["cta"]["h1"];
+
+let headButton = document.querySelector("button");
+headButton.textContent = siteContent["cta"]["button"];
+
+let headImage = document.querySelector("#cta-img");
+headImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let contentHeaders = document.querySelectorAll("h4");
+ contentHeaders.forEach(function (item) {
+   
+ })
