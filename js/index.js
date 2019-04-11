@@ -43,12 +43,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let navList = document.querySelectorAll("a");
 // console.log(navList);
-navList[0].textContent = siteContent["nav"]["nav-item-1"];
-navList[1].textContent = siteContent["nav"]["nav-item-2"];
-navList[2].textContent = siteContent["nav"]["nav-item-3"];
-navList[3].textContent = siteContent["nav"]["nav-item-4"];
-navList[4].textContent = siteContent["nav"]["nav-item-5"];
-navList[5].textContent = siteContent["nav"]["nav-item-6"];
+navList.forEach((el, index) => {
+  el.textContent = siteContent.nav[`nav-item-${index + 1}`]
+});
 
 let bigHeader = document.querySelector("h1");
 console.log(bigHeader);
@@ -61,6 +58,20 @@ let headImage = document.querySelector("#cta-img");
 headImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let contentHeaders = document.querySelectorAll("h4");
- contentHeaders.forEach(function (item) {
-   
- })
+contentHeaders[0].textContent = siteContent["main-content"]["features-h4"];
+contentHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+contentHeaders[2].textContent = siteContent["main-content"]["services-h4"];
+contentHeaders[3].textContent = siteContent["main-content"]["product-h4"];
+contentHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let mainContent = document.querySelectorAll(".text-content p");
+mainContent[0].textContent = siteContent["main-content"]["features-content"];
+mainContent[1].textContent = siteContent["main-content"]["about-content"];
+mainContent[2].textContent = siteContent["main-content"]["services-content"];
+mainContent[3].textContent = siteContent["main-content"]["product-content"];
+mainContent[4].textContent = siteContent["main-content"]["vision-content"];
+
+let contentImg = document.querySelector("#middle-img");
+contentImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// let
