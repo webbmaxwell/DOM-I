@@ -48,7 +48,7 @@ navList.forEach((el, index) => {
 });
 
 let bigHeader = document.querySelector("h1");
-console.log(bigHeader);
+// console.log(bigHeader);
 bigHeader.textContent = siteContent["cta"]["h1"];
 
 let headButton = document.querySelector("button");
@@ -84,3 +84,8 @@ contactInfo[2].textContent = siteContent["contact"]["email"];
 
 let copyRight = document.querySelector("footer");
 copyRight.textContent = siteContent["footer"]["copyright"];
+
+let navItem = document.querySelectorAll("a");
+  navItem.forEach((el) => {
+    el.style.color = 'green'
+  });
