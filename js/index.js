@@ -89,3 +89,11 @@ let navItem = document.querySelectorAll("a");
   navItem.forEach((el) => {
     el.style.color = 'green'
   });
+
+let newChild = document.createElement("p");
+newChild.textContent = "This p was appended";
+document.body.appendChild(newChild);
+
+let newChild2 = document.createElement("p");
+newChild2.textContent = "This p was prepended";
+document.querySelector('header').prepend(newChild2);
