@@ -39,4 +39,61 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let navList = document.querySelectorAll("a");
+// console.log(navList);
+navList.forEach((el, index) => {
+  el.textContent = siteContent.nav[`nav-item-${index + 1}`]
+});
+
+let bigHeader = document.querySelector("h1");
+// console.log(bigHeader);
+bigHeader.textContent = siteContent["cta"]["h1"];
+
+let headButton = document.querySelector("button");
+headButton.textContent = siteContent["cta"]["button"];
+
+let headImage = document.querySelector("#cta-img");
+headImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let contentHeaders = document.querySelectorAll("h4");
+contentHeaders[0].textContent = siteContent["main-content"]["features-h4"];
+contentHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+contentHeaders[2].textContent = siteContent["main-content"]["services-h4"];
+contentHeaders[3].textContent = siteContent["main-content"]["product-h4"];
+contentHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let mainContent = document.querySelectorAll(".text-content p");
+mainContent[0].textContent = siteContent["main-content"]["features-content"];
+mainContent[1].textContent = siteContent["main-content"]["about-content"];
+mainContent[2].textContent = siteContent["main-content"]["services-content"];
+mainContent[3].textContent = siteContent["main-content"]["product-content"];
+mainContent[4].textContent = siteContent["main-content"]["vision-content"];
+
+let contentImg = document.querySelector("#middle-img");
+contentImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let contactHeader = document.querySelector(".contact h4");
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+
+let contactInfo = document.querySelectorAll(".contact p");
+contactInfo[0].textContent = siteContent["contact"]["address"];
+contactInfo[1].textContent = siteContent["contact"]["phone"];
+contactInfo[2].textContent = siteContent["contact"]["email"];
+
+let copyRight = document.querySelector("footer");
+copyRight.textContent = siteContent["footer"]["copyright"];
+
+let navItem = document.querySelectorAll("a");
+  navItem.forEach((el) => {
+    el.style.color = 'green'
+  });
+
+let newChild = document.createElement("p");
+newChild.textContent = "This p was appended";
+document.body.appendChild(newChild);
+
+let newChild2 = document.createElement("p");
+newChild2.textContent = "This p was prepended";
+document.querySelector('header').prepend(newChild2);
